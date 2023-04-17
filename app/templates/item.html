@@ -1,0 +1,20 @@
+{% if items %}
+<ul class="tree">
+    {% for item in items %}
+        <li>
+            {% if item.active %}
+                <details open>
+            {% else %}
+                <details close>
+            {% endif %}
+                <summary><a href="{{ item.element.link }}">{{ item.element.text }}</a></summary>
+            {% if item.element.children %}
+                <ul class="">
+                    {% include 'item.html' with items=item.children %}
+                </ul>
+            {% endif %}
+        </details>
+        </li>
+    {% endfor %}
+</ul>
+{% endif %}

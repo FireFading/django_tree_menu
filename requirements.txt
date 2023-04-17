@@ -1,0 +1,3 @@
+Django
+django_environ
+psycopg2-binary
