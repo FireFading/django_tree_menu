@@ -1,6 +1,4 @@
 import nox
-from dotenv import load_dotenv
-
 
 @nox.session
 def format(session: nox.Session) -> None:
